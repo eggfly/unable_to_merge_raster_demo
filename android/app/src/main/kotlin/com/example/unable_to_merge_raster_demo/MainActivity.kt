@@ -3,6 +3,7 @@ package com.example.unable_to_merge_raster_demo
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import io.flutter.embedding.android.FlutterFragment
+import io.flutter.embedding.android.TransparencyMode
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
@@ -52,6 +53,7 @@ class MainActivity : FragmentActivity() {
             // flutterFragment = FlutterFragment.withNewEngine().shouldAttachEngineToActivity(false).build();
             flutterFragment1 = FlutterFragment
                     .withCachedEngine("engine1")
+                    .transparencyMode(TransparencyMode.opaque)
                     .build()
             //            new MethodChannel(
 //                    flutterEngine.getDartExecutor().getBinaryMessenger(),
@@ -70,6 +72,7 @@ class MainActivity : FragmentActivity() {
             // flutterFragment = FlutterFragment.withNewEngine().shouldAttachEngineToActivity(false).build();
             flutterFragment2 = FlutterFragment
                     .withCachedEngine("engine2")
+                    .transparencyMode(TransparencyMode.opaque)
                     .build()
             //            new MethodChannel(
 //                    flutterEngine.getDartExecutor().getBinaryMessenger(),
